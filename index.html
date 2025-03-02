@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicklers For Life</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="assets/images/lg1.png"> <!-- Favicon -->
+    <!-- Bootstrap JavaScript (Enables navbar toggler) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="assets/images/lg1.png" alt="Logo"> Sicklers For Life</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team">Our Team</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" data-bs-toggle="dropdown">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#completed">Completed Projects</a></li>
+                        <li><a class="dropdown-item" href="#ongoing">Ongoing Projects</a></li>
+                        <li><a class="dropdown-item" href="#upcoming">Upcoming Projects</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home">
+    <video autoplay muted loop id="bg-video">
+        <source src="assets/images/vid1.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+        <h1>Welcome to Sicklers For Life</h1>
+        <p>Supporting sickle cell patients and warriors.</p>
+        <a href="#about" class="btn">Learn More</a>
+    </div>
+</section>
+
+<a href="https://wa.me/254715264486" class="whatsapp-float" target="_blank">
+    <img src="assets/images/whatsapp.png" alt="Chat with us">
+</a>
+
+<!-- About Us Section -->
+<section id="about">
+    <div class="about-container">
+        <!-- Hexagon Image Grid -->
+        <div class="hexagon-grid">
+            <div class="hex hex1"><img src="assets/images/pic1.webp" alt="Sickle Cell Awareness"></div>
+            <div class="hex hex2"><img src="assets/images/pic2.webp" alt="Support Programs"></div>
+            <div class="hex hex3"><img src="assets/images/pic3.webp" alt="Medical Assistance"></div>
+            <div class="hex hex4"><img src="assets/images/pic1.webp" alt="Community Workshops"></div>
+            <div class="hex hex5"><img src="assets/images/pic2.webp" alt="Blood Donation Drive"></div>
+            <div class="hex hex6"><img src="assets/images/pic3.webp" alt="Patient Care"></div>
+        </div>
+
+        <!-- About Us Text -->
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p><strong>Sicklers For Life</strong> is a dedicated organization focused on supporting individuals affected by <b>sickle cell disease</b>. Our mission is to provide education, medical assistance, and emotional support to sickle cell warriors and their families.</p>
+
+            <p>We run <b>awareness campaigns</b>, <b>organize blood donation drives</b>, and ensure that patients receive proper treatment. Our vision is a world where every sickle cell warrior has access to the care and support they need.</p>
+
+            <p>Join us in making a difference. Together, we can improve lives and bring hope to millions!</p>
+
+            <a href="#projects" class="btn">Explore Our Work</a>
+        </div>
+    </div>
+</section>
+
+<section id="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="assets/images/dp1.jpg" alt="Whitney Megh">
+            <h4>Whitney Megh</h4>
+            <p>Founder & CEO</p>
+        </div>
+        <div class="team-member">
+            <img src="assets/images/dp2.jpg" alt="Jane ">
+            <h4>Jane </h4>
+            <p>Medical Advisor</p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Projects Section -->
+<section id="projects" class="container py-5">
+    <h2 class="text-center">Our Projects</h2>
+
+    <!-- Project Filter Buttons -->
+    <div class="text-center mb-4">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+        <button class="filter-btn" data-filter="ongoing">Ongoing</button>
+        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+    </div>
+
+    <div class="row">
+        <!-- Completed Project Example -->
+        <div class="col-md-4 project-card completed">
+            <div class="project">
+                <img src="assets/images/a6.jpg" alt="Project 1">
+                <div class="project-info">
+                    <h4>Blood Donation Drive</h4>
+                    <p>Year: 2023 | Cost: $5,000</p>
+                    <button class="read-more" data-bs-toggle="modal" data-bs-target="#project1Modal">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ongoing Project Example -->
+        <div class="col-md-4 project-card ongoing">
+            <div class="project">
+                <img src="assets/images/a7.jpg" alt="Project 2">
+                <div class="project-info">
+                    <h4>Medical Support Program</h4>
+                    <p>Expected Completion: 2025</p>
+                    <button class="read-more" data-bs-toggle="modal" data-bs-target="#project2Modal">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upcoming Project Example -->
+        <div class="col-md-4 project-card upcoming">
+            <div class="project">
+                <img src="assets/images/a1.jpg" alt="Project 3">
+                <div class="project-info">
+                    <h4>Sickle Cell Awareness Campaign</h4>
+                    <p>Planned Start: 2026</p>
+                    <button class="read-more" data-bs-toggle="modal" data-bs-target="#project3Modal">Read More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modals for Project Details -->
+<div class="modal fade" id="project1Modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Blood Donation Drive</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/images/a3.jpg" class="img-fluid">
+                <p>We organized a nationwide blood donation drive to support sickle cell patients.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="project2Modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Medical Support Program</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/images/a4.jpg" class="img-fluid">
+                <p>Providing free medical check-ups and medication for sickle cell patients.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="project3Modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sickle Cell Awareness Campaign</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/images/a5.jpg" class="img-fluid">
+                <p>Upcoming project aimed at educating communities about sickle cell disease.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Testimonials Section -->
+<section id="testimonials">
+    <h2 class="text-center">What People Say</h2>
+    <div class="testimonial-container">
+        <button class="scroll-btn left" onclick="scrollTestimonials(-1)">&#10094;</button>
+        
+        <div class="testimonials-wrapper">
+            <div class="testimonial-card">
+                <img src="assets/images/dp3.jpg" alt="John Miller">
+                <p>"This organization changed my life! They provided me with the support I needed to manage my condition."</p>
+                <h4>- John Miller</h4>
+            </div>
+            
+            <div class="testimonial-card">
+                <img src="assets/images/dp4.jpg" alt="Jane Mitch">
+                <p>"Sicklers For Life is doing amazing work. Their education programs helped me understand sickle cell better."</p>
+                <h4>- Jane Mitch</h4>
+            </div>
+            
+            <div class="testimonial-card">
+                <img src="assets/images/dp1.jpg" alt="Michael Whin">
+                <p>"Thanks to their medical assistance, I got access to treatments I never thought I could afford."</p>
+                <h4>- Michael Whin</h4>
+            </div>
+            
+            <div class="testimonial-card">
+                <img src="assets/images/dp2.jpg" alt="Emily Niuer">
+                <p>"Their workshops and blood donation drives have saved so many lives. Truly inspiring!"</p>
+                <h4>- Emily Niuer</h4>
+            </div>
+        </div>
+
+        <button class="scroll-btn right" onclick="scrollTestimonials(1)">&#10095;</button>
+    </div>
+</section>
+
+
+<!-- Contact Us Section -->
+<section id="contact" class="container py-5">
+    <h2 class="text-center text-white">Contact Us</h2>
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="text" id="title" name="title" placeholder="Title" required>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+                <p id="statusMessage"></p>
+            </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <h3>Other Ways to Reach Us</h3>
+            <p><strong>Email:</strong> <a href="mailto:eddysimba9@gmail.com">eddysimba9@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+254715264486">+254 715 264 486</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/254715264486" target="_blank">Chat with us</a></p>
+            <p><strong>Social Media:</strong></p>
+            <div class="social-icons">
+                <a href="https://twitter.com/your_handle" target="_blank"><img src="assets/images/twitter.png" alt="Twitter"></a>
+                <a href="https://instagram.com/your_handle" target="_blank"><img src="assets/images/instagram.png" alt="Instagram"></a>
+                <a href="https://tiktok.com/@your_handle" target="_blank"><img src="assets/images/tiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="get-involved">
+    <h2>Get Involved</h2>
+    <div class="involvement-options">
+        <div class="option">
+            <img src="assets/images/donate.png" alt="Donate">
+            <h3>Donate</h3>
+            <p>Your contributions help us support more sickle cell warriors.</p>
+            <a href="#donate" class="btn">Donate Now</a>
+        </div>
+        <div class="option">
+            <img src="assets/images/volunteer.png" alt="Volunteer">
+            <h3>Volunteer</h3>
+            <p>Be part of our mission to change lives.</p>
+            <a href="#contact" class="btn">Join Us</a>
+        </div>
+        <div class="option">
+            <img src="assets/images/partner.png" alt="Partner">
+            <h3>Partner with Us</h3>
+            <p>Collaborate with us to make a greater impact.</p>
+            <a href="#contact" class="btn">Partner Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; <span id="year"></span> Sicklers For Life. All rights reserved. Developed by Ernest.</p>
+</footer>
+
+<script>
+    // Dynamically update the footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
