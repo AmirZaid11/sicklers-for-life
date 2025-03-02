@@ -35,5 +35,5 @@ This is a **modern and fully responsive** NGO website built using **HTML, CSS (B
 ## 🚀 Installation & Setup  
 ### 1️⃣ **Clone the repository**  
 ```bash
-git clone https://github.com/your-username/sicklers-for-life.git
+git clone https://github.com/AmirZaid11/sicklers-for-life.git
 cd sicklers-for-life
