@@ -32,12 +32,14 @@ This is a **modern and fully responsive** NGO website built using **HTML, CSS (B
 
 ---
 
+---
+
+## Live demo
+ https://sicklersforlife.netlify.app/
+---
+
 ## 🚀 Installation & Setup  
 ### 1️⃣ **Clone the repository**  
 ```bash
 git clone https://github.com/AmirZaid11/sicklers-for-life.git
 cd sicklers-for-life
----
-
-## Live demo
- https://sicklersforlife.netlify.app/
