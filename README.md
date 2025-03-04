@@ -37,3 +37,7 @@ This is a **modern and fully responsive** NGO website built using **HTML, CSS (B
 ```bash
 git clone https://github.com/AmirZaid11/sicklers-for-life.git
 cd sicklers-for-life
+---
+
+## Live demo
+ https://sicklersforlife.netlify.app/
