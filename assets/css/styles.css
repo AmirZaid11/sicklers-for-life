@@ -224,52 +224,45 @@ button:hover {
 
 /* Testimonials Section */
 #testimonials {
-    background: linear-gradient(45deg, red, purple);
-    color: white;
     text-align: center;
     padding: 50px 20px;
+    background: linear-gradient(to right, #7b1fa2, #d32f2f); /* Purple to Red Gradient */
+    color: white;
+    position: relative;
 }
 
 .testimonial-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     overflow: hidden;
-    max-width: 90%;
+    position: relative;
+    max-width: 800px;
     margin: auto;
 }
 
-.testimonials-wrapper {
+.testimonial-wrapper {
     display: flex;
     gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 10px;
-    width: 80%;
-    scrollbar-width: none; /* Hide scrollbar for modern UI */
+    transition: transform 0.5s ease-in-out;
 }
 
-.testimonials-wrapper::-webkit-scrollbar {
-    display: none; /* Hide scrollbar in Chrome */
-}
-
-.testimonial-card {
+.testimonial {
     min-width: 300px;
-    max-width: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
     text-align: center;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
-.testimonial-card:hover {
+.testimonial:hover {
     transform: scale(1.05);
 }
 
-.testimonial-card img {
+.testimonial img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -277,15 +270,38 @@ button:hover {
     border: 3px solid white;
 }
 
-.testimonial-card p {
-    font-style: italic;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
+h4 {
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
 }
 
-.testimonial-card h4 {
-    font-weight: bold;
-    margin-top: 10px;
+/* Navigation Buttons */
+.scroll-btn {
+    background: white;
+    color: #d32f2f;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease-in-out;
+}
+
+.scroll-btn:hover {
+    background: #f5f5f5;
+}
+
+#prevBtn {
+    left: 5%;
+}
+
+#nextBtn {
+    right: 5%;
 }
 
 /* Scroll Buttons */
@@ -516,3 +532,167 @@ button:hover {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* Chatbot Styling */
+#chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#chat-button {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#chat-button img {
+    width: 40px;
+    height: 40px;
+}
+
+#chat-window {
+    display: none;
+    width: 320px;
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+#chat-header {
+    background: purple;
+    color: white;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+}
+
+#chat-body {
+    padding: 12px;
+    max-height: 300px;
+    overflow-y: auto;
+    background: #f9f9f9;
+}
+
+/* Bot and User Messages */
+.user-message {
+    text-align: right;
+    background: #007bff;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin: 6px 0;
+    max-width: 75%;
+    display: inline-block;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+.bot-message {
+    text-align: left;
+    background: #e0e0e0;
+    color: black;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin: 6px 0;
+    max-width: 75%;
+    display: inline-block;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+/* Typing Animation */
+.bot-typing {
+    text-align: left;
+    font-style: italic;
+    color: gray;
+    margin: 6px 0;
+    font-size: 13px;
+}
+
+@keyframes dots {
+    0% { content: "."; }
+    33% { content: ".."; }
+    66% { content: "..."; }
+    100% { content: "."; }
+}
+
+.bot-typing::after {
+    content: "...";
+    animation: dots 1.5s infinite;
+}
+
+/* Input Section */
+#chat-input-container {
+    display: flex;
+    padding: 12px;
+    border-top: 1px solid #ccc;
+    background: white;
+}
+
+#user-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+#send-message {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#send-message:hover {
+    background: darkred;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Back to Top Button */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: purple;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s;
+}
+
+#backToTop:hover {
+    background: red;
+}
+

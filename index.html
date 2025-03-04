@@ -13,6 +13,33 @@
 
 </head>
 <body>
+
+    <button id="backToTop" title="Go to top">↑</button>
+
+
+<!-- Chatbot Button & Window -->
+<div id="chat-container">
+    <div id="chat-button">
+        <img src="assets/images/bot.png" alt="Chatbot">
+    </div>
+    <div id="chat-window">
+        <div id="chat-header">
+            <span>Chat with Us</span>
+            <button id="close-chat">&times;</button>
+        </div>
+        <div id="chat-body">
+            <p class="bot-message">Hi! How can I assist you today?</p>
+        </div>
+        <div id="chat-input-container">
+            <input type="text" id="user-input" placeholder="Type a message..." />
+            <button id="send-message">Send</button>
+        </div>
+        
+    </div>
+</div>
+
+
+
     <div id="loading-screen">
         <div class="loader"></div>
     </div>
@@ -56,10 +83,6 @@
         <a href="#about" class="btn">Learn More</a>
     </div>
 </section>
-
-<a href="https://wa.me/254715264486" class="whatsapp-float" target="_blank">
-    <img src="assets/images/whatsapp.png" alt="Chat with us">
-</a>
 
 <!-- About Us Section -->
 <section id="about">
@@ -206,39 +229,30 @@
 
 <!-- Testimonials Section -->
 <section id="testimonials">
-    <h2 class="text-center">What People Say</h2>
+    <h2 class="section-title">What People Say</h2>
     <div class="testimonial-container">
-        <button class="scroll-btn left" onclick="scrollTestimonials(-1)">&#10094;</button>
-        
-        <div class="testimonials-wrapper">
-            <div class="testimonial-card">
-                <img src="assets/images/dp3.jpg" alt="John Miller">
-                <p>"This organization changed my life! They provided me with the support I needed to manage my condition."</p>
-                <h4>- John Miller</h4>
+        <button id="prevBtn" class="scroll-btn">❮</button>
+        <div class="testimonial-wrapper">
+            <div class="testimonial">
+                <img src="assets/images/dp3.jpg" alt="User 1">
+                <p>"Sicklers For Life has been a great support for my family. Their programs are life-changing!"</p>
+                <h4>Jane Doe</h4>
             </div>
-            
-            <div class="testimonial-card">
-                <img src="assets/images/dp4.jpg" alt="Jane Mitch">
-                <p>"Sicklers For Life is doing amazing work. Their education programs helped me understand sickle cell better."</p>
-                <h4>- Jane Mitch</h4>
+            <div class="testimonial">
+                <img src="assets/images/dp4.jpg" alt="User 2">
+                <p>"I received crucial medical aid through this organization. Forever grateful!"</p>
+                <h4>Michael Smith</h4>
             </div>
-            
-            <div class="testimonial-card">
-                <img src="assets/images/dp1.jpg" alt="Michael Whin">
-                <p>"Thanks to their medical assistance, I got access to treatments I never thought I could afford."</p>
-                <h4>- Michael Whin</h4>
-            </div>
-            
-            <div class="testimonial-card">
-                <img src="assets/images/dp2.jpg" alt="Emily Niuer">
-                <p>"Their workshops and blood donation drives have saved so many lives. Truly inspiring!"</p>
-                <h4>- Emily Niuer</h4>
+            <div class="testimonial">
+                <img src="assets/images/dp1.jpg" alt="User 3">
+                <p>"Their awareness programs have helped me understand sickle cell better!"</p>
+                <h4>Sarah Johnson</h4>
             </div>
         </div>
-
-        <button class="scroll-btn right" onclick="scrollTestimonials(1)">&#10095;</button>
+        <button id="nextBtn" class="scroll-btn">❯</button>
     </div>
 </section>
+
 
 
 <!-- Contact Us Section -->
